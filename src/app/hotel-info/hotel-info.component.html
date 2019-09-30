@@ -1,0 +1,62 @@
+<div class="card">
+
+  <div class="card-image"
+       *ngIf="hotels.length > 0"
+       [ngStyle]="{'background-image':
+       'url(' + hotels[selectedHotelIndex]['img'][selectedPicIndex] + ')'}">
+  </div>
+
+  <div class="card-nav">
+    <ul class="nav">
+      <li class="nav-item" (click)="onCountrySelect(cz)"><a class="default" #cz>Czech Republic</a> |</li>
+      <li class="nav-item" (click)="onCountrySelect(mon)"><a #mon>Montenegro</a> |</li>
+      <li class="nav-item" (click)="onCountrySelect(sw)"><a  #sw>Swiss</a> |</li>
+      <li class="nav-item" (click)="onCountrySelect(it)"><a #it>Italy</a></li>
+    </ul>
+  </div>
+
+  <div class="card-content">
+    <div class="hotel-info">
+      <h4 class="info-header">{{countryName}}</h4>
+      <hr class="hr">
+
+      <div class="descriptions"
+           #descriptions
+           (scroll)="onHotelScrollSelect($event)"
+      >
+
+        <div class="description"
+             *ngFor="let hotel of hotels;let i = index;"
+        >
+
+          <div class="description-container"
+               *ngIf="hotels.length > 0"
+          >
+
+            <div class="description-text">
+                <h5>Resort Address</h5>
+                {{hotel['street']}},<br>
+                {{hotel['city']}}<br>
+            </div>
+            <p class="description-phone">Tel: {{hotel['phone']}}</p>
+          </div>
+          <div class="description-images" *ngIf="hotels.length > 0">
+            <div class="description-image"
+                 (click)="onHotelPicSelect($event)"
+                 [ngStyle]="{'background-image':
+                  'url(' +hotel['img'][0] + ')'}">
+            </div>
+            <div
+              (click)="onHotelPicSelect($event)"
+              class="description-image"
+              [ngStyle]="{'background-image':
+              'url(' + hotel['img'][1] + ')'}">
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

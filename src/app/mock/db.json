@@ -1,0 +1,298 @@
+{
+  "Italy": [
+    {
+      "img": ["/assets/images/horto_convento_1.jpg","/assets/images/horto_convento_2.jpg"],
+      "street": "Convento 11 street",
+      "city": "Milno",
+      "phone":"+1213442134",
+      "weather": {
+        "title": "Milano",
+        "icon": "/assets/images/sun.svg",
+        "water": "25",
+        "temperature": "29"
+      },
+      "social": {
+        "title": "Horto Convento",
+        "img": "/assets/images/horto_convento_1.jpg",
+        "following": 767,
+        "followers": 2455
+      }
+    },
+    {
+      "img": ["/assets/images/del_corso_1.jpg","/assets/images/del_corso_2.jpg"],
+      "street": "Corso 22 street",
+      "city": "Milno",
+      "phone":"+122112231",
+      "weather": {
+        "title": "Milano",
+        "icon": "/assets/images/rain.svg",
+        "water": "13",
+        "temperature": "15"
+      },
+      "social": {
+        "title": "Del Corso",
+        "img": "/assets/images/del_corso_1.jpg",
+        "followers": 3456,
+        "following": 987
+      }
+    },
+    {
+      "img": ["/assets/images/villa_agape_1.jpg","/assets/images/villa_agape_2.jpg"],
+      "street": "Agape 5 street",
+      "city": "Milano",
+      "phone":"+32121223",
+      "weather": {
+        "title": "Milano",
+        "icon": "/assets/images/snowing.svg",
+        "water": "-5",
+        "temperature": "-22"
+      },
+      "social": {
+        "title": "Del Corso",
+        "img": "/assets/images/del_corso_1.jpg",
+        "followers": 5543,
+        "following": 1121
+      }
+    },
+    {
+      "img": ["/assets/images/mona_lisa_1.jpg","/assets/images/mona_lisa_2.jpg"],
+      "street": "Mona Lisa 6 street",
+      "city": "Milno",
+      "phone":"+23423423",
+      "weather": {
+        "title": "Milano",
+        "icon": "/assets/images/sun.svg",
+        "water": "18",
+        "temperature": "22"
+      },
+      "social": {
+        "title": "Mona Lisa",
+        "img": "/assets/images/mona_lisa_1.jpg",
+        "followers": 5543,
+        "following": 1121
+      }
+    }
+  ],
+  "CzechRepublic": [
+    {
+      "img": ["/assets/images/pytloun_1.jpg","/assets/images/pytloun_2.jpg"],
+      "street": "Pytloun 1 street",
+      "city": "Prague",
+      "phone":"+5213442168",
+      "weather": {
+        "title": "Prague",
+        "icon": "/assets/images/rain.svg",
+        "water": "11",
+        "temperature": "12"
+      },
+      "social": {
+        "title": "Pytloun",
+        "img": "/assets/images/pytloun_1.jpg",
+        "following": 802,
+        "followers": 2300
+      }
+    },
+    {
+      "img": ["/assets/images/cosmopolitan_1.jpg","/assets/images/cosmopolitan_2.jpg"],
+      "street": "Cosmopolitan 11 street",
+      "city": "Prague",
+      "phone":"+2311228899",
+      "weather": {
+        "title": "Prague",
+        "icon": "/assets/images/sun.svg",
+        "water": "15",
+        "temperature": "5"
+      },
+      "social": {
+        "title": "Cosmopolitan",
+        "img": "/assets/images/cosmopolitan_1.jpg",
+        "followers": 8456,
+        "following": 387
+      }
+    },
+    {
+      "img": ["/assets/images/art_deco_1.jpg","/assets/images/art_deco_2.jpg"],
+      "street": "Art Deco 5 street",
+      "city": "Prague",
+      "phone":"+897121242",
+      "weather": {
+        "title": "Prague",
+        "icon": "/assets/images/rain.svg",
+        "water": "14",
+        "temperature": "1"
+      },
+      "social": {
+        "title": "Art Deco",
+        "img": "/assets/images/art_deco_1.jpg",
+        "followers": 3443,
+        "following":721
+      }
+    },
+    {
+      "img": ["/assets/images/grandium_1.jpg","/assets/images/grandium_2.jpg"],
+      "street": "Grandium 6 street",
+      "city": "Prague",
+      "phone":"+243423423",
+      "weather": {
+        "title": "Prague",
+        "icon": "/assets/images/sun.svg",
+        "water": "15",
+        "temperature": "3"
+      },
+      "social": {
+        "title": "Grandium",
+        "img": "/assets/images/grandium_1.jpg",
+        "followers": 3333,
+        "following": 521
+      }
+    }
+  ],
+  "Montenegro": [
+    {
+      "img": ["/assets/images/splendid_1.jpg","/assets/images/splendid_2.jpg"],
+      "street": "Splendid 1 street",
+      "city": "Budva",
+      "phone":"+7975323456",
+      "weather": {
+        "title": "Budva",
+        "icon": "/assets/images/sun.svg",
+        "water": "23",
+        "temperature": "25"
+      },
+      "social": {
+        "title": "Splendid",
+        "img": "/assets/images/splendid_1.jpg",
+        "following": 1802,
+        "followers": 22300
+      }
+    },
+    {
+      "img": ["/assets/images/harmonia_1.jpg","/assets/images/harmonia_2.jpg"],
+      "street": "Harmonia 11 street",
+      "city": "Budva",
+      "phone":"+098764243",
+      "weather": {
+        "title": "Budva",
+        "icon": "/assets/images/sun.svg",
+        "water": "25",
+        "temperature": "27"
+      },
+      "social": {
+        "title": "Harmonia",
+        "img": "/assets/images/harmonia_1.jpg",
+        "followers": 1456,
+        "following": 487
+      }
+    },
+    {
+      "img": ["/assets/images/zeta_1.jpg","/assets/images/zeta_2.jpg"],
+      "street": "Zeta 5 street",
+      "city": "Budva",
+      "phone":"+731259866",
+      "weather": {
+        "title": "Budva",
+        "icon": "/assets/images/sun.svg",
+        "water": "24",
+        "temperature": "26"
+      },
+      "social": {
+        "title": "Zeta",
+        "img": "/assets/images/zeta_1.jpg",
+        "followers": 4443,
+        "following": 1221
+      }
+    },
+    {
+      "img": ["/assets/images/majestic_1.jpg","/assets/images/majestic_2.jpg"],
+      "street": "Majestic 2 street",
+      "city": "Budva",
+      "phone":"+244423423",
+      "weather": {
+        "title": "Budva",
+        "icon": "/assets/images/rain.svg",
+        "water": "25",
+        "temperature": "28"
+      },
+      "social": {
+        "title": "Majestic",
+        "img": "/assets/images/grandium_1.jpg",
+        "followers": 5333,
+        "following": 321
+      }
+    }
+  ],
+  "Swiss": [
+    {
+      "img": ["/assets/images/four_seasons_1.jpg","/assets/images/four_seasons_2.jpg"],
+      "street": "Four seasons 12 street",
+      "city": "Geneva",
+      "phone":"+93213456",
+      "weather": {
+        "title": "Geneva",
+        "icon": "/assets/images/snowing.svg",
+        "water": "-2",
+        "temperature": "-8"
+      },
+      "social": {
+        "title": "Four seasons",
+        "img": "/assets/images/four_seasons_1.jpg",
+        "following": 4402,
+        "followers": 1300
+      }
+    },
+    {
+      "img": ["/assets/images/beau_rivage_1.jpg","/assets/images/beau_rivage_2.jpg"],
+      "street": "Bean 4 street",
+      "city": "Geneva",
+      "phone":"+6543343452",
+      "weather": {
+        "title": "Geneva",
+        "icon": "/assets/images/rain.svg",
+        "water": "-1",
+        "temperature": "0"
+      },
+      "social": {
+        "title": "Bean",
+        "img": "/assets/images/beau_rivage_1.jpg",
+        "followers": 2456,
+        "following": 887
+      }
+    },
+    {
+      "img": ["/assets/images/les_armures_1.jpg","/assets/images/les_armures_2.jpg"],
+      "street": "Les Armures 2 street",
+      "city": "Geneva",
+      "phone":"+8906423457",
+      "weather": {
+        "title": "Geneva",
+        "icon": "/assets/images/snowing.svg",
+        "water": "-5",
+        "temperature": "-7"
+      },
+      "social": {
+        "title": "Les Armures",
+        "img": "/assets/images/les_armures_1.jpg",
+        "followers": 900,
+        "following": 555
+      }
+    },
+    {
+      "img": ["/assets/images/richmond_1.jpg","/assets/images/richmond_2.jpg"],
+      "street": "Richmond 2 street",
+      "city": "Geneva",
+      "phone":"+3599864323",
+      "weather": {
+        "title": "Geneva",
+        "icon": "/assets/images/snowing.svg",
+        "water": "-5",
+        "temperature": "-15"
+      },
+      "social": {
+        "title": "Richmond",
+        "img": "/assets/images/richmond_1.jpg",
+        "followers": 3456,
+        "following": 721
+      }
+    }
+  ]
+}
