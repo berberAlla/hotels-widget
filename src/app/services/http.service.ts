@@ -1,12 +1,13 @@
-import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
-@Injectable({providedIn: "root"})
+@Injectable({providedIn: 'root'})
 export class HttpService {
 
   constructor(private http: HttpClient){}
 
-  getData(country: string){
-    return this.http.get(`http://localhost:3000/${country}`);
+  getData(country: string) {
+    // return this.http.get(`http://localhost:3000/${country}`);
+    return this.http.get(`https://hotels-widget.firebaseio.com/${country}.json`);
   }
 }
