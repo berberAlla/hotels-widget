@@ -1,14 +1,15 @@
 import {
   AfterViewChecked,
+  AfterViewInit,
   Component,
   ElementRef,
   EventEmitter,
   OnInit,
-  Output, QueryList, Renderer2,
-  ViewChild, ViewChildren,
+  Output,
+  ViewChild
 } from '@angular/core';
 
-import {HttpService} from "../services/http.service";
+import {HttpService} from '../services/http.service';
 
 
 @Component({
@@ -22,8 +23,8 @@ export class HotelInfoComponent implements OnInit {
 
   @Output('hotelSelected') hotelSelected: EventEmitter<any> = new EventEmitter();
 
-  @ViewChild('cz',{static: true}) defaultSelected: ElementRef;
-  @ViewChild('descriptions',{static: true}) descriptions: ElementRef;
+  @ViewChild('cz', {static: true}) defaultSelected: ElementRef;
+  @ViewChild('descriptions', {static: true}) descriptions: ElementRef;
 
   countryName: string;
 
@@ -31,14 +32,11 @@ export class HotelInfoComponent implements OnInit {
 
   selectedHotelIndex = 0;
   selectedPicIndex = 0;
-
-
   ngOnInit() {
     this.onCountrySelect(this.defaultSelected.nativeElement);
   }
-
-  onCountrySelect(country){
-    this.descriptions.nativeElement.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  onCountrySelect(country) {
+    // this.descriptions.nativeElement.scrollTo({top: 0, left: 0, behavior: 'smooth'});
     this.countryName = country.innerText;
     const countryToRequest = country.innerText.split(' ').join('');
     this.httpService.getData(countryToRequest)
@@ -60,7 +58,6 @@ export class HotelInfoComponent implements OnInit {
 
   onHotelScrollSelect(event: Event) {
     const target = event.target as HTMLElement;
-
     const descriptions = Array.from(target.children) as HTMLElement[];
     const index = descriptions.findIndex((elem: HTMLElement) => {
       const elemY = elem.getBoundingClientRect().top;
@@ -71,9 +68,11 @@ export class HotelInfoComponent implements OnInit {
         (this.calcBounds(elemY, 50) >= this.calcBounds(parentTop, 0));
     });
 
-    if(index >= 0) {
+    console.log(index);
+
+    if(index >= 0 && index !== this.selectedHotelIndex) {
       this.selectedHotelIndex = index;
-      this.selectedPicIndex = 0;
+      // this.selectedPicIndex = 0;
       this.hotelSelected.emit(this.hotels[this.selectedHotelIndex]);
     }
   }
