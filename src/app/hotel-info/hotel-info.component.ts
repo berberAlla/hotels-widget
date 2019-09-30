@@ -37,6 +37,7 @@ export class HotelInfoComponent implements OnInit {
   }
   onCountrySelect(country) {
     // this.descriptions.nativeElement.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    this.hotels = [];
     this.countryName = country.innerText;
     const countryToRequest = country.innerText.split(' ').join('');
     this.httpService.getData(countryToRequest)
