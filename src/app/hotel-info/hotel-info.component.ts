@@ -1,6 +1,4 @@
 import {
-  AfterViewChecked,
-  AfterViewInit,
   Component,
   ElementRef,
   EventEmitter,
@@ -19,7 +17,8 @@ import {HttpService} from '../services/http.service';
 })
 export class HotelInfoComponent implements OnInit {
 
-  constructor(private httpService: HttpService) { }
+  constructor(private httpService: HttpService) {
+  }
 
   @Output('hotelSelected') hotelSelected: EventEmitter<any> = new EventEmitter();
 
@@ -32,12 +31,13 @@ export class HotelInfoComponent implements OnInit {
 
   selectedHotelIndex = 0;
   selectedPicIndex = 0;
+
   ngOnInit() {
     this.onCountrySelect(this.defaultSelected.nativeElement);
   }
+
   onCountrySelect(country) {
     // this.descriptions.nativeElement.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-    this.hotels = [];
     this.countryName = country.innerText;
     const countryToRequest = country.innerText.split(' ').join('');
     this.httpService.getData(countryToRequest)
@@ -47,11 +47,6 @@ export class HotelInfoComponent implements OnInit {
       });
   }
 
-  // onHotelSelect(index){
-  //   this.selectedHotelIndex = index;
-  //   this.selectedPicIndex = 0;
-  //   this.hotelSelected.emit(this.hotels[index]);
-  // }
 
   calcBounds(bound: number, offset: number) {
     return bound + pageYOffset + offset;
@@ -71,9 +66,8 @@ export class HotelInfoComponent implements OnInit {
 
     console.log(index);
 
-    if(index >= 0 && index !== this.selectedHotelIndex) {
+    if (index >= 0 && index !== this.selectedHotelIndex) {
       this.selectedHotelIndex = index;
-      // this.selectedPicIndex = 0;
       this.hotelSelected.emit(this.hotels[this.selectedHotelIndex]);
     }
   }

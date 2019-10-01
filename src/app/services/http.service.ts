@@ -7,7 +7,6 @@ export class HttpService {
   constructor(private http: HttpClient){}
 
   getData(country: string) {
-    // return this.http.get(`http://localhost:3000/${country}`);
     return this.http.get(`https://hotels-widget.firebaseio.com/${country}.json`);
   }
 }
