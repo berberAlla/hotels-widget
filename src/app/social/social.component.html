@@ -1,20 +1,20 @@
-<div class="social-container">
-  <h3 class="social-title" *ngIf="hotel">{{hotel.social.title + ' ' + hotel.city}}</h3>
+<div class="social-container" *ngIf="hotel">
+  <h3 class="social-title">{{hotel.social.title + ' ' + hotel.city}}</h3>
   <hr class="hr">
   <div
     class="social-image"
-    *ngIf="hotel"
+
     [ngStyle]="{'background-image': 'url(' + hotel.social.img + ')'}"
   >
   </div>
   <div class="socail-footer">
     <span class="followers">
-      <p class="followers-total" *ngIf="hotel">{{hotel.social.followers}}</p>
+      <p class="followers-total">{{hotel.social.followers}}</p>
       <p class="followers-text">Followers</p>
     </span>
     <div class="vr"></div>
     <span class="following">
-      <p class="following-total" *ngIf="hotel">{{hotel.social.following}}</p>
+      <p class="following-total">{{hotel.social.following}}</p>
       <p class="following-text">Following</p>
     </span>
   </div>

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HotelInfoComponent } from './hotel-info/hotel-info.component';
 import { WheatherComponent } from './wheather/wheather.component';
 import { SocialComponent } from './social/social.component';
+import {PhoneFormatPipe} from './pipes/phone-format.pipe';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SocialComponent } from './social/social.component';
     AppComponent,
     HotelInfoComponent,
     WheatherComponent,
-    SocialComponent
+    SocialComponent,
+    PhoneFormatPipe
   ],
   imports: [
     BrowserModule,

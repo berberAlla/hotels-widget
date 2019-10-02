@@ -1,7 +1,6 @@
-<div class="card">
+<div class="card" *ngIf="hotels.length > 0">
 
   <div class="card-image"
-       *ngIf="hotels.length > 0"
        [ngStyle]="{'background-image':
        'url(' + hotels[selectedHotelIndex]['img'][selectedPicIndex] + ')'}">
   </div>
@@ -29,18 +28,16 @@
              *ngFor="let hotel of hotels;let i = index;"
         >
 
-          <div class="description-container"
-               *ngIf="hotels.length > 0"
-          >
+          <div class="description-container">
 
             <div class="description-text">
                 <h5>Resort Address</h5>
                 {{hotel['street']}},<br>
                 {{hotel['city']}}<br>
             </div>
-            <p class="description-phone">Tel: {{hotel['phone']}}</p>
+            <p class="description-phone">Tel: {{hotel['phone'] | phoneFormat: countryName : ' ' : true}}</p>
           </div>
-          <div class="description-images" *ngIf="hotels.length > 0">
+          <div class="description-images">
             <div class="description-image"
                  (click)="onHotelPicSelect($event)"
                  [ngStyle]="{'background-image':

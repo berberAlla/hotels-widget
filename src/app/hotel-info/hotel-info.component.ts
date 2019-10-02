@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 
 import {HttpService} from '../services/http.service';
+import {Subscription} from 'rxjs';
 
 
 @Component({
@@ -24,25 +25,38 @@ export class HotelInfoComponent implements OnInit {
 
   @ViewChild('cz', {static: true}) defaultSelected: ElementRef;
   @ViewChild('descriptions', {static: true}) descriptions: ElementRef;
-
-  countryName: string;
+  defaultCountry = 'Czech Republic';
+  countryName: string = this.defaultCountry;
 
   hotels: [] = [];
 
   selectedHotelIndex = 0;
   selectedPicIndex = 0;
 
+   subscription: Subscription;
+
   ngOnInit() {
-    this.onCountrySelect(this.defaultSelected.nativeElement);
+     this.defaultCountryRequest();
+  }
+
+  defaultCountryRequest(){
+    this.subscription = this.httpService.getData(this.defaultCountry.split(' ').join(''))
+      .subscribe((hotels: []) => {
+        this.hotels = hotels;
+        this.hotelSelected.emit(this.hotels[this.selectedHotelIndex]);
+        this.subscription.unsubscribe();
+      });
   }
 
   onCountrySelect(country) {
-    // this.descriptions.nativeElement.scrollTo({top: 0, left: 0, behavior: 'smooth'});
     this.countryName = country.innerText;
+    this.hotelSelected.emit(null);
     const countryToRequest = country.innerText.split(' ').join('');
+    this.hotels = [];
     this.httpService.getData(countryToRequest)
       .subscribe((hotels: []) => {
         this.hotels = hotels;
+        this.selectedHotelIndex = 0;
         this.hotelSelected.emit(this.hotels[this.selectedHotelIndex]);
       });
   }
@@ -63,8 +77,6 @@ export class HotelInfoComponent implements OnInit {
       return ((this.calcBounds(elemY, -50)) <= this.calcBounds(parentBottom, 0)) &&
         (this.calcBounds(elemY, 50) >= this.calcBounds(parentTop, 0));
     });
-
-    console.log(index);
 
     if (index >= 0 && index !== this.selectedHotelIndex) {
       this.selectedHotelIndex = index;

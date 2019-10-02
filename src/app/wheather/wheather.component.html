@@ -1,10 +1,10 @@
-<div class="wheather-container">
-  <h3 class="wheather-title" *ngIf="hotel">{{hotel.weather.title}}</h3>
+<div class="wheather-container" *ngIf="hotel">
+  <h3 class="wheather-title">{{hotel.weather.title}}</h3>
   <hr class="hr">
   <div class="wheather-info">
-    <img *ngIf="hotel" [src]="hotel.weather.icon" class="wheather-icon">
-    <span *ngIf="hotel" class="wheather-text">{{hotel.weather.temperature}}</span><sup class="celsius ">O</sup>
+    <img  [src]="hotel.weather.icon" class="wheather-icon">
+    <span class="wheather-text">{{hotel.weather.temperature}}</span><sup class="celsius ">O</sup>
   </div>
-  <div *ngIf="hotel" class="wheather-footer">{{'Water ' + hotel.weather.water}}</div>
+  <div  class="wheather-footer">{{'Water ' + hotel.weather.water}}</div>
 </div>
 
