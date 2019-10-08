@@ -1,59 +1,20 @@
-<div class="card" *ngIf="hotels.length > 0">
+<div class="card" *ngIf="!!countries">
 
   <div class="card-image"
+
        [ngStyle]="{'background-image':
-       'url(' + hotels[selectedHotelIndex]['img'][selectedPicIndex] + ')'}">
+       'url(' + selectedHotel.img[selectedPicIndex] + ')'}">
   </div>
 
   <div class="card-nav">
-    <ul class="nav">
-      <li class="nav-item" (click)="onCountrySelect(cz)"><a class="default" #cz>Czech Republic</a> |</li>
-      <li class="nav-item" (click)="onCountrySelect(mon)"><a #mon>Montenegro</a> |</li>
-      <li class="nav-item" (click)="onCountrySelect(sw)"><a  #sw>Swiss</a> |</li>
-      <li class="nav-item" (click)="onCountrySelect(it)"><a #it>Italy</a></li>
-    </ul>
+    <app-countries-menu></app-countries-menu>
   </div>
 
   <div class="card-content">
     <div class="hotel-info">
       <h4 class="info-header">{{countryName}}</h4>
       <hr class="hr">
-
-      <div class="descriptions"
-           #descriptions
-           (scroll)="onHotelScrollSelect($event)"
-      >
-
-        <div class="description"
-             *ngFor="let hotel of hotels;let i = index;"
-        >
-
-          <div class="description-container">
-
-            <div class="description-text">
-                <h5>Resort Address</h5>
-                {{hotel['street']}},<br>
-                {{hotel['city']}}<br>
-            </div>
-            <p class="description-phone">Tel: {{hotel['phone'] | phoneFormat: countryName : ' ' : true}}</p>
-          </div>
-          <div class="description-images">
-            <div class="description-image"
-                 (click)="onHotelPicSelect($event)"
-                 [ngStyle]="{'background-image':
-                  'url(' +hotel['img'][0] + ')'}">
-            </div>
-            <div
-              (click)="onHotelPicSelect($event)"
-              class="description-image"
-              [ngStyle]="{'background-image':
-              'url(' + hotel['img'][1] + ')'}">
-            </div>
-          </div>
-        </div>
-
-
-      </div>
+        <app-descriptions></app-descriptions>
     </div>
   </div>
 </div>

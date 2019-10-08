@@ -1,0 +1,485 @@
+{
+  "CzechRepublic" : [ {
+    "city" : "Prague",
+    "img" : [ "./assets/images/pytloun_1.jpg", "./assets/images/pytloun_2.jpg" ],
+    "phone" : "+420821843596",
+    "social" : {
+      "followers" : 2300,
+      "following" : 802,
+      "img" : "./assets/images/pytloun_1.jpg",
+      "title" : "Pytloun"
+    },
+    "street" : "Pytloun 1 street",
+    "weather" : {
+      "icon" : "./assets/images/rain.svg",
+      "temperature" : "12",
+      "title" : "Prague",
+      "water" : "11"
+    }
+  }, {
+    "city" : "Prague",
+    "img" : [ "./assets/images/cosmopolitan_1.jpg", "./assets/images/cosmopolitan_2.jpg" ],
+    "phone" : "+420743289109",
+    "social" : {
+      "followers" : 8456,
+      "following" : 387,
+      "img" : "./assets/images/cosmopolitan_1.jpg",
+      "title" : "Cosmopolitan"
+    },
+    "street" : "Cosmopolitan 11 street",
+    "weather" : {
+      "icon" : "./assets/images/sun.svg",
+      "temperature" : "5",
+      "title" : "Prague",
+      "water" : "15"
+    }
+  }, {
+    "city" : "Prague",
+    "img" : [ "./assets/images/art_deco_1.jpg", "./assets/images/art_deco_2.jpg" ],
+    "phone" : "+420403103975",
+    "social" : {
+      "followers" : 3443,
+      "following" : 721,
+      "img" : "./assets/images/art_deco_1.jpg",
+      "title" : "Art Deco"
+    },
+    "street" : "Art Deco 5 street",
+    "weather" : {
+      "icon" : "./assets/images/rain.svg",
+      "temperature" : "1",
+      "title" : "Prague",
+      "water" : "14"
+    }
+  }, {
+    "city" : "Prague",
+    "img" : [ "./assets/images/grandium_1.jpg", "./assets/images/grandium_2.jpg" ],
+    "phone" : "+420849103456",
+    "social" : {
+      "followers" : 3333,
+      "following" : 521,
+      "img" : "./assets/images/grandium_1.jpg",
+      "title" : "Grandium"
+    },
+    "street" : "Grandium 6 street",
+    "weather" : {
+      "icon" : "./assets/images/sun.svg",
+      "temperature" : "3",
+      "title" : "Prague",
+      "water" : "15"
+    }
+  } ],
+  "Germany" : [ {
+    "city" : "Berlin",
+    "img" : [ "/assets/images/axel_springer_1.jpg", "/assets/images/axel_springer_2.jpg" ],
+    "phone" : "+493012340987",
+    "social" : {
+      "followers" : 2455,
+      "following" : 798,
+      "img" : "/assets/images/axel_springer_1.jpg",
+      "title" : "Axel Springer"
+    },
+    "street" : "Axel 21 street",
+    "weather" : {
+      "icon" : "/assets/images/sun.svg",
+      "temperature" : "29",
+      "title" : "Berlin",
+      "water" : "21"
+    }
+  }, {
+    "city" : "Berlin",
+    "img" : [ "/assets/images/one_1.jpg", "/assets/images/one_2.jpg" ],
+    "phone" : "+493013341927",
+    "social" : {
+      "followers" : 10000,
+      "following" : 4567,
+      "img" : "/assets/images/one_1.jpg",
+      "title" : "One"
+    },
+    "street" : "One 67 street",
+    "weather" : {
+      "icon" : "/assets/images/rain.svg",
+      "temperature" : "15",
+      "title" : "Berlin",
+      "water" : "9"
+    }
+  }, {
+    "city" : "Berlin",
+    "img" : [ "/assets/images/plus_1.jpg", "/assets/images/plus_2.jpg" ],
+    "phone" : "+493214442487",
+    "social" : {
+      "followers" : 2345,
+      "following" : 889,
+      "img" : "/assets/images/plus_1.jpg",
+      "title" : "Plus"
+    },
+    "street" : "Plus 15 street",
+    "weather" : {
+      "icon" : "/assets/images/snowing.svg",
+      "temperature" : "-7",
+      "title" : "Berlin",
+      "water" : "-11"
+    }
+  }, {
+    "city" : "Berlin",
+    "img" : [ "/assets/images/riu_1.jpg", "/assets/images/riu_2.jpg" ],
+    "phone" : "+49389234388",
+    "social" : {
+      "followers" : 3421,
+      "following" : 890,
+      "img" : "/assets/images/riu_1.jpg",
+      "title" : "Riu"
+    },
+    "street" : "Riu 12 street",
+    "weather" : {
+      "icon" : "/assets/images/sun.svg",
+      "temperature" : "21",
+      "title" : "Berlin",
+      "water" : "13"
+    }
+  } ],
+  "Israel" : [ {
+    "city" : "Tel-Aviv",
+    "img" : [ "/assets/images/nordoy_1.jpg", "/assets/images/nordoy_2.jpg" ],
+    "phone" : "+97241112347",
+    "social" : {
+      "followers" : 2455,
+      "following" : 1211,
+      "img" : "/assets/images/nordoy_1.jpg",
+      "title" : "Nordoy"
+    },
+    "street" : "Convento 11 street",
+    "weather" : {
+      "icon" : "/assets/images/sun.svg",
+      "temperature" : "33",
+      "title" : "Tel-Aviv",
+      "water" : "25"
+    }
+  }, {
+    "city" : "Tel-Aviv",
+    "img" : [ "/assets/images/atlas_1.jpg", "/assets/images/atlas_2.jpg" ],
+    "phone" : "+97234561099",
+    "social" : {
+      "followers" : 5433,
+      "following" : 1340,
+      "img" : "/assets/images/atlas_1.jpg",
+      "title" : "Atlas"
+    },
+    "street" : "Atlas 22 street",
+    "weather" : {
+      "icon" : "/assets/images/sun.svg",
+      "temperature" : "37",
+      "title" : "Tel-Aviv",
+      "water" : "32"
+    }
+  }, {
+    "city" : "Tel-Aviv",
+    "img" : [ "/assets/images/inta_1.jpg", "/assets/images/inta_2.jpg" ],
+    "phone" : "+97234050123",
+    "social" : {
+      "followers" : 5543,
+      "following" : 2123,
+      "img" : "/assets/images/inta_1.jpg",
+      "title" : "Inta"
+    },
+    "street" : "Agape 5 street",
+    "weather" : {
+      "icon" : "/assets/images/sun.svg",
+      "temperature" : "29",
+      "title" : "Tel-Aviv",
+      "water" : "24"
+    }
+  }, {
+    "city" : "Tel-Aviv",
+    "img" : [ "/assets/images/the_vera_1.jpg", "/assets/images/the_vera_2.jpg" ],
+    "phone" : "+97239903149",
+    "social" : {
+      "followers" : 7609,
+      "following" : 3100,
+      "img" : "/assets/images/the_vera_1.jpg",
+      "title" : "The Vera"
+    },
+    "street" : "Mona Lisa 6 street",
+    "weather" : {
+      "icon" : "/assets/images/sun.svg",
+      "temperature" : "26",
+      "title" : "Tel-Aviv",
+      "water" : "24"
+    }
+  } ],
+  "Italy" : [ {
+    "city" : "Milno",
+    "img" : [ "./assets/images/horto_convento_1.jpg", "./assets/images/horto_convento_2.jpg" ],
+    "phone" : "+392193424567",
+    "social" : {
+      "followers" : 2455,
+      "following" : 767,
+      "img" : "./assets/images/horto_convento_1.jpg",
+      "title" : "Horto Convento"
+    },
+    "street" : "Convento 11 street",
+    "weather" : {
+      "icon" : "./assets/images/sun.svg",
+      "temperature" : "29",
+      "title" : "Milano",
+      "water" : "25"
+    }
+  }, {
+    "city" : "Milno",
+    "img" : [ "./assets/images/del_corso_1.jpg", "./assets/images/del_corso_2.jpg" ],
+    "phone" : "+393214123479",
+    "social" : {
+      "followers" : 3456,
+      "following" : 987,
+      "img" : "./assets/images/del_corso_1.jpg",
+      "title" : "Del Corso"
+    },
+    "street" : "Corso 22 street",
+    "weather" : {
+      "icon" : "./assets/images/rain.svg",
+      "temperature" : "15",
+      "title" : "Milano",
+      "water" : "13"
+    }
+  }, {
+    "city" : "Milano",
+    "img" : [ "./assets/images/villa_agape_1.jpg", "./assets/images/villa_agape_2.jpg" ],
+    "phone" : "+392391203949",
+    "social" : {
+      "followers" : 5543,
+      "following" : 1121,
+      "img" : "./assets/images/villa_agape_1.jpg",
+      "title" : "Del Corso"
+    },
+    "street" : "Agape 5 street",
+    "weather" : {
+      "icon" : "./assets/images/snowing.svg",
+      "temperature" : "-22",
+      "title" : "Milano",
+      "water" : "-5"
+    }
+  }, {
+    "city" : "Milno",
+    "img" : [ "./assets/images/mona_lisa_1.jpg", "./assets/images/mona_lisa_2.jpg" ],
+    "phone" : "+399121285478",
+    "social" : {
+      "followers" : 5543,
+      "following" : 1121,
+      "img" : "./assets/images/mona_lisa_1.jpg",
+      "title" : "Mona Lisa"
+    },
+    "street" : "Mona Lisa 6 street",
+    "weather" : {
+      "icon" : "./assets/images/sun.svg",
+      "temperature" : "22",
+      "title" : "Milano",
+      "water" : "18"
+    }
+  } ],
+  "Montenegro" : [ {
+    "city" : "Budva",
+    "img" : [ "./assets/images/splendid_1.jpg", "./assets/images/splendid_2.jpg" ],
+    "phone" : "+38056493012",
+    "social" : {
+      "followers" : 22300,
+      "following" : 1802,
+      "img" : "./assets/images/splendid_1.jpg",
+      "title" : "Splendid"
+    },
+    "street" : "Splendid 1 street",
+    "weather" : {
+      "icon" : "./assets/images/sun.svg",
+      "temperature" : "25",
+      "title" : "Budva",
+      "water" : "23"
+    }
+  }, {
+    "city" : "Budva",
+    "img" : [ "./assets/images/harmonia_1.jpg", "./assets/images/harmonia_2.jpg" ],
+    "phone" : "+38041933486",
+    "social" : {
+      "followers" : 1456,
+      "following" : 487,
+      "img" : "./assets/images/harmonia_1.jpg",
+      "title" : "Harmonia"
+    },
+    "street" : "Harmonia 11 street",
+    "weather" : {
+      "icon" : "./assets/images/sun.svg",
+      "temperature" : "27",
+      "title" : "Budva",
+      "water" : "25"
+    }
+  }, {
+    "city" : "Budva",
+    "img" : [ "./assets/images/zeta_1.jpg", "./assets/images/zeta_2.jpg" ],
+    "phone" : "+38088504358",
+    "social" : {
+      "followers" : 4443,
+      "following" : 1221,
+      "img" : "./assets/images/zeta_1.jpg",
+      "title" : "Zeta"
+    },
+    "street" : "Zeta 5 street",
+    "weather" : {
+      "icon" : "./assets/images/sun.svg",
+      "temperature" : "26",
+      "title" : "Budva",
+      "water" : "24"
+    }
+  }, {
+    "city" : "Budva",
+    "img" : [ "./assets/images/majestic_1.jpg", "./assets/images/majestic_2.jpg" ],
+    "phone" : "+38093029455",
+    "social" : {
+      "followers" : 5333,
+      "following" : 321,
+      "img" : "./assets/images/majestic_1.jpg",
+      "title" : "Majestic"
+    },
+    "street" : "Majestic 2 street",
+    "weather" : {
+      "icon" : "./assets/images/rain.svg",
+      "temperature" : "28",
+      "title" : "Budva",
+      "water" : "25"
+    }
+  } ],
+  "Swiss" : [ {
+    "city" : "Geneva",
+    "img" : [ "./assets/images/four_seasons_1.jpg", "./assets/images/four_seasons_2.jpg" ],
+    "phone" : "+41499236845",
+    "social" : {
+      "followers" : 1300,
+      "following" : 4402,
+      "img" : "./assets/images/four_seasons_1.jpg",
+      "title" : "Four seasons"
+    },
+    "street" : "Four seasons 12 street",
+    "weather" : {
+      "icon" : "./assets/images/snowing.svg",
+      "temperature" : "-8",
+      "title" : "Geneva",
+      "water" : "-2"
+    }
+  }, {
+    "city" : "Geneva",
+    "img" : [ "./assets/images/beau_rivage_1.jpg", "./assets/images/beau_rivage_2.jpg" ],
+    "phone" : "+41945384957",
+    "social" : {
+      "followers" : 2456,
+      "following" : 887,
+      "img" : "./assets/images/beau_rivage_1.jpg",
+      "title" : "Bean"
+    },
+    "street" : "Bean 4 street",
+    "weather" : {
+      "icon" : "./assets/images/rain.svg",
+      "temperature" : "0",
+      "title" : "Geneva",
+      "water" : "-1"
+    }
+  }, {
+    "city" : "Geneva",
+    "img" : [ "./assets/images/les_armures_1.jpg", "./assets/images/les_armures_2.jpg" ],
+    "phone" : "+41594387401",
+    "social" : {
+      "followers" : 900,
+      "following" : 555,
+      "img" : "./assets/images/les_armures_1.jpg",
+      "title" : "Les Armures"
+    },
+    "street" : "Les Armures 2 street",
+    "weather" : {
+      "icon" : "./assets/images/snowing.svg",
+      "temperature" : "-7",
+      "title" : "Geneva",
+      "water" : "-5"
+    }
+  }, {
+    "city" : "Geneva",
+    "img" : [ "./assets/images/richmond_1.jpg", "./assets/images/richmond_2.jpg" ],
+    "phone" : "+41773456120",
+    "social" : {
+      "followers" : 3456,
+      "following" : 721,
+      "img" : "./assets/images/richmond_1.jpg",
+      "title" : "Richmond"
+    },
+    "street" : "Richmond 2 street",
+    "weather" : {
+      "icon" : "./assets/images/snowing.svg",
+      "temperature" : "-15",
+      "title" : "Geneva",
+      "water" : "-5"
+    }
+  } ],
+  "Ukraine" : [ {
+    "city" : "Kiev",
+    "img" : [ "/assets/images/amarant_1.jpg", "/assets/images/amarant_2.jpg" ],
+    "phone" : "+38445551234",
+    "social" : {
+      "followers" : 3333,
+      "following" : 890,
+      "img" : "/assets/images/amarant_1.jpg",
+      "title" : "Amarant"
+    },
+    "street" : "Amarant 61 street",
+    "weather" : {
+      "icon" : "/assets/images/sun.svg",
+      "temperature" : "29",
+      "title" : "Kiev",
+      "water" : "22"
+    }
+  }, {
+    "city" : "Kiev",
+    "img" : [ "/assets/images/fairmont_1.jpg", "/assets/images/fairmont_2.jpg" ],
+    "phone" : "+38350504214",
+    "social" : {
+      "followers" : 1456,
+      "following" : 908,
+      "img" : "/assets/images/fairmont_1.jpg",
+      "title" : "Fairmont"
+    },
+    "street" : "Fair 123 street",
+    "weather" : {
+      "icon" : "/assets/images/rain.svg",
+      "temperature" : "7",
+      "title" : "Kiev",
+      "water" : "0"
+    }
+  }, {
+    "city" : "Kiev",
+    "img" : [ "/assets/images/park_inn_1.jpg", "/assets/images/park_inn_2.jpg" ],
+    "phone" : "+38206001859",
+    "social" : {
+      "followers" : 4302,
+      "following" : 2000,
+      "img" : "/assets/images/park_inn_1.jpg",
+      "title" : "Park Inn"
+    },
+    "street" : "Park 25 street",
+    "weather" : {
+      "icon" : "/assets/images/snowing.svg",
+      "temperature" : "-32",
+      "title" : "Kiev",
+      "water" : "-40"
+    }
+  }, {
+    "city" : "Kiev",
+    "img" : [ "/assets/images/premier_palace_1.jpg", "/assets/images/premier_palace_2.jpg" ],
+    "phone" : "+38128091222",
+    "social" : {
+      "followers" : 8921,
+      "following" : 3020,
+      "img" : "/assets/images/premier_palace_1.jpg",
+      "title" : "Premier Palace"
+    },
+    "street" : "Premier 46 street",
+    "weather" : {
+      "icon" : "/assets/images/sun.svg",
+      "temperature" : "22",
+      "title" : "Kiev",
+      "water" : "19"
+    }
+  } ]
+}

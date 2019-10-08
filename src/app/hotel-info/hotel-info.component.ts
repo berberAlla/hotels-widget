@@ -1,14 +1,14 @@
-import {
-  Component,
-  ElementRef,
-  EventEmitter,
-  OnInit,
-  Output,
-  ViewChild
-} from '@angular/core';
 
-import {HttpService} from '../services/http.service';
-import {Subscription} from 'rxjs';
+
+import {HttpService} from "../services/http.service";
+
+import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
+
+import {DataStorageService} from "../services/data-storage.service";
+import {Hotel} from "../shared/global-exports/exports";
+import {HotelsScrollService} from "./services/hotels-scroll.service";
+import {Subscription} from "rxjs";
+
 
 
 @Component({
@@ -18,78 +18,54 @@ import {Subscription} from 'rxjs';
 })
 export class HotelInfoComponent implements OnInit {
 
-  constructor(private httpService: HttpService) {
-  }
+  constructor(private dataStorage: DataStorageService,
+              private hotelScrollService: HotelsScrollService,
+              private http: HttpService) { }
 
-  @Output('hotelSelected') hotelSelected: EventEmitter<any> = new EventEmitter();
 
-  @ViewChild('cz', {static: true}) defaultSelected: ElementRef;
-  @ViewChild('descriptions', {static: true}) descriptions: ElementRef;
-  defaultCountry = 'Czech Republic';
+  defaultCountry: string = 'Czech Republic';
+
   countryName: string = this.defaultCountry;
 
-  hotels: [] = [];
+  countries: {};
+  selectedPicIndex: number = 0;
+  selectedHotel: Hotel;
 
-  selectedHotelIndex = 0;
-  selectedPicIndex = 0;
-
-   subscription: Subscription;
+  selectedCountryHotels: Hotel[];
 
   ngOnInit() {
-     this.defaultCountryRequest();
-  }
 
-  defaultCountryRequest(){
-    this.subscription = this.httpService.getData(this.defaultCountry.split(' ').join(''))
-      .subscribe((hotels: []) => {
-        this.hotels = hotels;
-        this.hotelSelected.emit(this.hotels[this.selectedHotelIndex]);
-        this.subscription.unsubscribe();
-      });
-  }
-
-  onCountrySelect(country) {
-    this.countryName = country.innerText;
-    this.hotelSelected.emit(null);
-    const countryToRequest = country.innerText.split(' ').join('');
-    this.hotels = [];
-    this.httpService.getData(countryToRequest)
-      .subscribe((hotels: []) => {
-        this.hotels = hotels;
-        this.selectedHotelIndex = 0;
-        this.hotelSelected.emit(this.hotels[this.selectedHotelIndex]);
-      });
-  }
-
-
-  calcBounds(bound: number, offset: number) {
-    return bound + pageYOffset + offset;
-  }
-
-  onHotelScrollSelect(event: Event) {
-    const target = event.target as HTMLElement;
-    const descriptions = Array.from(target.children) as HTMLElement[];
-    const index = descriptions.findIndex((elem: HTMLElement) => {
-      const elemY = elem.getBoundingClientRect().top;
-      const parentBottom = target.getBoundingClientRect().top + target.getBoundingClientRect().height;
-      const parentTop = target.getBoundingClientRect().top;
-
-      return ((this.calcBounds(elemY, -50)) <= this.calcBounds(parentBottom, 0)) &&
-        (this.calcBounds(elemY, 50) >= this.calcBounds(parentTop, 0));
+    this.http.countriesRequest()
+      .subscribe((countries: {}) => {
+        this.selectedHotel = countries[this.defaultCountry.split(' ').join('')][0];
+        this.selectedCountryHotels = countries[this.defaultCountry.split(' ').join('')];
+        this.countries = countries;
+        setTimeout(() => { // dispatch default values
+          this.dataStorage.countries.next(this.countries);
+          this.dataStorage.selectedCountry.next(this.defaultCountry);
+          this.dataStorage.selectedHotel.next(countries[this.defaultCountry.split(' ').join('')][0]);
+          this.dataStorage.selectedCountryHotels.next(countries[this.defaultCountry.split(' ').join('')]);
+        },0);
     });
 
-    if (index >= 0 && index !== this.selectedHotelIndex) {
-      this.selectedHotelIndex = index;
-      this.hotelSelected.emit(this.hotels[this.selectedHotelIndex]);
-    }
-  }
 
-  onHotelPicSelect(event: Event) {
-    event.stopPropagation();
-    const target = event.target as HTMLElement;
-    this.selectedPicIndex = Array.from(target.parentElement.children)
-      .findIndex((elem) => {
-        return elem === target;
+    this.dataStorage.selectedCountry
+      .subscribe((countryName: string) => {
+        this.countryName = countryName;
+        if(!!countryName){
+          this.selectedCountryHotels = this.countries[this.countryName.split(' ').join('')];
+          this.dataStorage.selectedCountryHotels.next(this.selectedCountryHotels);
+        }
+      });
+
+    this.dataStorage.selectedHotel
+      .subscribe((selectedHotel: Hotel) => {
+        this.selectedHotel = selectedHotel;
+      });
+
+    this.dataStorage.selectedPicIndex
+      .subscribe((selectedPicIndex: number) => {
+        this.selectedPicIndex = selectedPicIndex;
       });
   }
 }

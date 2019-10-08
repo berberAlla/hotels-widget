@@ -1,9 +1,8 @@
-<div class="social-container" *ngIf="hotel">
-  <h3 class="social-title">{{hotel.social.title + ' ' + hotel.city}}</h3>
+<div class="social-container" *ngIf="!!hotel?.social">
+  <h3 class="social-title" >{{hotel.social.title + ' ' + hotel.city}}</h3>
   <hr class="hr">
   <div
     class="social-image"
-
     [ngStyle]="{'background-image': 'url(' + hotel.social.img + ')'}"
   >
   </div>

@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit} from "@angular/core";
+import {DataStorageService} from "./services/data-storage.service";
 
 
 @Component({
@@ -6,17 +7,14 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  constructor() {
-  }
-
-  hotelInfo;
-
+export class AppComponent implements OnInit{
+  constructor(private dataStorage: DataStorageService) {}
+  countries: {};
   ngOnInit(): void {
-  }
 
-  hotelSelected(hotelInfo) {
-    this.hotelInfo = hotelInfo;
+    this.dataStorage.countries
+      .subscribe((countries: {}) => {
+        this.countries = countries;
+      })
   }
-
 }

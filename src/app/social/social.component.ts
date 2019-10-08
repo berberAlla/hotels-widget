@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {DataStorageService} from "../services/data-storage.service";
+import {Hotel} from "../shared/global-exports/exports";
 
 
 @Component({
@@ -8,12 +10,15 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class SocialComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataStorage: DataStorageService) { }
 
-  @Input('hotel') hotel;
+  hotel: Hotel;
 
   ngOnInit() {
-
+    this.dataStorage.selectedHotel
+      .subscribe((hotel: Hotel) => {
+        this.hotel = hotel;
+      })
   }
 
 }

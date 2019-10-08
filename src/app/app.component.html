@@ -1,12 +1,15 @@
-<div class="backdrop" *ngIf="!hotelInfo">
+<div class="backdrop" *ngIf="!countries">
   <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
 </div>
 
 <div class="container">
-  <app-hotel-info (hotelSelected)="hotelSelected($event)"></app-hotel-info>
+  <app-hotel-info></app-hotel-info>
   <div class="card">
-    <app-wheather [hotel]="hotelInfo"></app-wheather>
-    <app-social [hotel]="hotelInfo"></app-social>
+    <app-weather></app-weather>
+    <app-social></app-social>
   </div>
 </div>
+
+
+
 

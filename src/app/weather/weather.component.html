@@ -1,0 +1,10 @@
+<div class="wheather-container" *ngIf="!!hotel?.weather">
+  <h3 class="wheather-title" >{{hotel.weather.title}}</h3>
+  <hr class="hr">
+  <div class="wheather-info">
+    <img [src]="hotel.weather.icon" class="wheather-icon">
+    <span class="wheather-text">{{hotel.weather.temperature}}</span><sup class="celsius ">O</sup>
+  </div>
+  <div class="wheather-footer">{{'Water ' + hotel.weather.water}}</div>
+</div>
+
