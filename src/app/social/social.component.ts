@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {DataStorageService} from "../services/data-storage.service";
+import {DataStorageService} from "../shared/services/data-storage.service";
 import {Hotel} from "../shared/global-exports/exports";
 
 

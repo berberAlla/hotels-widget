@@ -1,10 +1,10 @@
 
 
-import {HttpService} from "../services/http.service";
+import {HttpService} from "../shared/services/http.service";
 
 import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 
-import {DataStorageService} from "../services/data-storage.service";
+import {DataStorageService} from "../shared/services/data-storage.service";
 import {Hotel} from "../shared/global-exports/exports";
 import {HotelsScrollService} from "./services/hotels-scroll.service";
 import {Subscription} from "rxjs";

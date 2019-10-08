@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Subject} from "rxjs";
-import {Hotel} from "../shared/global-exports/exports";
+import {Hotel} from "../global-exports/exports";
 
 
 @Injectable()

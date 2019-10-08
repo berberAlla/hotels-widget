@@ -1,4 +1,4 @@
-import {DataStorageService} from "../../services/data-storage.service";
+import {DataStorageService} from "../../shared/services/data-storage.service";
 import {Hotel} from "../../shared/global-exports/exports";
 import {Injectable} from "@angular/core";
 

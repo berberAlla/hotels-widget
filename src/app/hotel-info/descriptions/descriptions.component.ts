@@ -1,7 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {HotelsScrollService} from "../services/hotels-scroll.service";
 import {Hotel} from "../../shared/global-exports/exports";
-import {DataStorageService} from "../../services/data-storage.service";
+import {DataStorageService} from "../../shared/services/data-storage.service";
 import {Subject} from "rxjs";
 
 @Component({
